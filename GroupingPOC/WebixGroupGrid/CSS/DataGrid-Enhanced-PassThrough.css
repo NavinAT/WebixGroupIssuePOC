@@ -1,0 +1,2358 @@
+﻿@charset "UTF-8";
+
+:root {
+	--row-border: solid 1px #d2d2d2;
+	--header-border-top: solid 1px #d2d2d2;
+	--timeline-border-top: solid 1px var(--colorA2);
+	--bg-color: var(--colorB3);
+	--cell-background-color: var(--colorB3);
+	--alt-background-color: var(--colorB3);
+	--current-background-color: var(--colorB3);
+	--edit-background-color: var(--colorBWhite);
+	--header-background-color: var(--colorE2);
+	--timeline-background-color: var(--colorBWhite);
+	--timeline-coarse-border: solid 1px var(--colorA2);
+	--timeline-fine-border: solid 1px var(--colorB2);
+	--timeline-now-border: solid 3px var(--colorA6);
+	--groupheader0-background-color: var(--colorE1);
+	--groupheader1-background-color: var(--colorE2);
+	--groupheader2-background-color: var(--colorE3);
+	--groupheader3-background-color: var(--colorE4);
+	--groupfooter0-background-color: var(--colorE1);
+	--groupfooter1-background-color: var(--colorE2);
+	--groupfooter2-background-color: var(--colorE3);
+	--groupfooter3-background-color: var(--colorE4);
+	--header-font-size: 12px;
+	--rowError-font-size: 12px;
+	--indexRowHeight: 23;
+	--headerRowHeight: 21;
+	--rowLineHeight: 18;
+}
+
+.no-lpadding
+{
+	padding-left: 0px !important;
+}
+
+.no-rpadding
+{
+	padding-right: 0px !important;
+}
+
+.datatable_toolbar
+{
+	padding: 5px 24px;
+	width: auto;
+}
+
+.ADBOXIndex1 .datatable_toolbar 
+{
+	padding: 5px 32px;
+	width: auto;
+}
+
+.datatable_toolbar table
+{
+	table-layout: auto;
+}
+
+.datatable-search 
+{
+	background-color: var(--colorEBase);
+	border: 1px solid var(--colorAToolbar);
+	line-height: 0;
+	overflow: hidden;
+	padding: 0 0 0 0;
+	vertical-align: top;
+	width: 189px;
+	border-radius: 2px;
+	display: flex;
+	height: 24px;
+}
+
+.datatable-search input
+{
+	background-color: var(--colorEBase);
+	border-width: 0px;
+	margin: 0;
+	padding: 3px 4px 3px 6px;
+	width: 165px;
+	box-sizing: border-box;
+}
+
+.datatable-search .input-icon-search
+{
+	background-image: url(DGForm2/fkey/Image.ashx?theme=Altair);
+	width: 14px;
+	height: 14px;
+	position: relative;
+	background-repeat: no-repeat;
+	padding: 5px 10px 7px 0px;
+	background-position-x: -4px;
+	background-position-y: -4px;
+}
+
+.datatable-search.Focus > span.input-icon-search
+{
+	background-color: var(--colorBCurrentTheme);
+}
+
+.datatable_toolbar > tr > td:first-child
+{
+  padding-left : 32px;
+}
+
+/* Excel filter */
+.condition-hide .webix_view.webix_layout_line
+{
+	display: none;
+}
+
+.datatable-applyfilter
+{
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.datatable-applyfilter.hidefilter
+{
+	background-image: url(DGForm2/filter_line/Image.ashx?th=Altair);
+	background-position-x: -2px;
+	background-position-y: -4px;
+}
+
+.datatable-applyfilter.showfilter
+{
+	background-image: url(DGForm2/filter_solid/Image.ashx?th=Altair);
+	background-position-x: 1px;
+	background-position-y: 0px;
+}
+
+.datatable_filter_showhide
+{
+	width: 0px;
+	padding-left: 4px;
+	padding-right: 4px !important;
+	vertical-align: top;
+}
+
+.filterbar-more-button
+{
+	background-image: url(DGForm2/c2/Image.ashx?theme=Altair);
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-position: center;
+	box-shadow: 0px 0px 4px var(--colorAToolbar);
+	border: 1px solid var(--colorAToolbar);
+	opacity: 1;
+	border-radius: 50%;
+	margin: 0 auto;
+	display: inline-block;
+	background-color: #ffffff;
+	position: relative;
+	z-index: 104;
+}
+
+.filterbar-more-button.hide-more-filter-collapse
+{
+	background-image: url(DGForm2/e2/Image.ashx?theme=Altair);
+}
+
+.datatable_filter.filter-expand,
+.datatable_filter.filter-expand.filter-applied,
+.datatable_filter.filter-applied
+{
+	background-image: url(TBForm1T/filter_solid/Image.ashx?th=Altair-NG);
+}
+
+.datatable_filter.filter-expand.filter-applied,
+.datatable_filter.filter-applied
+{
+	background-image: url(TBForm1T/filter_applied/Image.ashx?th=Altair-NG) !important;
+}
+
+.datatable_filter > td > table.ADBOXGRForm2F
+{
+	padding-top: 0px;
+	padding-left: 0px;
+}
+
+.column-chooser 
+{
+	vertical-align: middle;
+	padding-top: 2px;
+}
+
+.showColumnConfig
+{
+	background-image: url(DGForm2/config/Image.ashx?theme=Altair);
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+/* Popup datalist item */
+
+.webix_popup
+{
+	font-family: var(--fontFamily);
+	font-size: var(--fontSize);
+	line-height: 24px;
+}
+
+.webix_popup .webix_list_item
+{
+	line-height: 18px;
+	border-bottom: var(--row-border); 
+}
+
+.webix_popup .webix_list_item .webix_icon
+{
+	font-size: var(--lineHeight);
+}
+
+.webix_popup .webix_list_item > div 
+{
+	display: inline;
+	font-family: var(--fontFamily);
+	font-size: var(--fontSize);
+	line-height: 14px;
+	white-space: nowrap;
+}
+
+.webix_popup button
+{
+	font-family: var(--fontFamily);
+	font-size: var(--fontSize);
+}
+
+/* DataGrid */
+
+.datatable.webix_dtable
+{
+	font-family: var(--fontFamily) !important;
+	border-width: 0px !important;
+}
+
+.datatable.webix_dtable .showfilter-highlight-header .webix_hcolumn
+{
+	background-color: #FAFAFA !important;
+}
+
+.datatable.webix_dtable .showfilter-highlight-header .webix_hcolumn:nth-of-type(1)
+{
+	background-color: transparent !important;
+}
+
+.datatable.webix_dtable .webix_hcolumn:nth-of-type(2) .webix_hcell
+{
+	padding-left: 2px !important;
+}
+
+.datatable.webix_dtable .webix_hcolumn:nth-of-type(3) .webix_hcell.DGTC
+{
+	padding-left: 0px !important;
+}
+
+.datatable.webix_dtable .webix_hcolumn .webix_hcell
+{
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell
+{
+	font-size: var(--header-font-size);
+	font-family: var(--fontFamily);
+	line-height: 18px !important;
+	padding: 2px 3px 2px 10px;
+	letter-spacing: 0px;
+	text-align: justify;
+	color: #757575;
+}
+
+.DGCL.webix_first, .DGCL.webix_first > .webix_cell,
+.DGCR.webix_last, .DGCR.webix_last > .webix_cell
+{
+	border-bottom: none !important;
+	border-top: none !important;
+	background: transparent !important;
+}
+
+.DGCL.webix_first:hover,
+.DGCR.webix_last:hover
+{
+	cursor: default !important;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell .webix_ss_sort_single
+{
+	width: 16px;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell.ADBOXDGForm2ZColBG
+{
+	text-align: center;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell .webix_ss_sort_asc,
+.datatable.webix_dtable .webix_ss_header .webix_hcell .webix_ss_sort_desc
+{
+	position: relative;
+	margin-top: -5px;
+	top: 31%;
+	height: 16px;
+	right: 2px;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell .webix_ss_sort_asc .webix_ss_sort_num, 
+.datatable.webix_dtable .webix_ss_header .webix_hcell .webix_ss_sort_desc .webix_ss_sort_num
+{
+	line-height: 17px;
+	color: var(--colorEText);
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell.htimeline table
+{
+	line-height: 18px !important;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell span > input[type=checkbox]:not(:checked)
+{
+	visibility: hidden;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell:hover
+{
+	background-color: #F2F2F2;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell span:hover
+{
+	cursor: pointer;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell.datatable-cell-center_align
+{
+	justify-content: center;
+	border-bottom: solid 1px #9e9e9e;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcolumn div.webix_last_row,
+.datatable.webix_dtable .webix_ss_header .webix_span.webix_last_row
+{
+	border-bottom: var(--header-border-top);
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell.webix_span
+{
+	border-right: solid 4px #ffffff;
+}
+
+.datatable.webix_dtable .webix_ss_header:hover .webix_hcell span > input[type=checkbox]
+{
+	visibility: visible;
+}
+
+.webix_table_checkbox, .webix_hcell input[type="checkbox"]
+{
+	position: relative !important;
+	left: 0 !important;
+}
+
+table.ADBOXMenu tr td.ADMNUMenuL label 
+{
+	padding-right: 12px;
+}
+
+.datatable.webix_dtable div.webix_ss_vscroll_header
+{
+	border-bottom: var(--header-border-top);
+	border-left: none;
+}
+
+.datatable.webix_dtable .webix_ss_body
+{
+	/*Removing the background effect of row select & hover in column 1 & column 2*/
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.nowrap .webix_cell
+{
+	white-space: nowrap;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.nowrap .webix_cell.multiline
+{
+	white-space: normal !important;
+	line-height: 18px !important;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column .webix_cell.multiline
+{
+	white-space: normal !important;
+	line-height: 18px !important;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.DGTLC.nowrap .webix_cell
+{
+	padding-left: 1px;
+	background-color: transparent;
+	border-left: none 0px transparent;
+	border-top: none 1px #99cccc;
+	border-bottom: var(--row-border);
+	height: 23px !important;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.DGTLC.nowrap .webix_cell > div > div
+{
+	/*white-space: normal;*/
+	position: relative;
+	height: 23px !important;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.datatable_cell_multiline .webix_cell
+{
+	height: auto !important;
+	line-height: 18px !important;
+	white-space: pre-wrap;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.no-lpadding .webix_cell,
+.datatable.webix_dtable .webix_ss_body .webix_column:nth-of-type(3).DGTC .webix_cell,
+.datatable.webix_dtable .webix_ss_body .webix_column[column="1"] .webix_cell 
+{
+	padding-left: 0px !important;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.DGSC .webix_cell div > input[type=checkbox]:not(:checked)
+{
+	visibility: hidden;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.DGSC .webix_cell.webix-row-hover div > input[type=checkbox]
+{
+	visibility: visible;
+}
+
+.datatable.webix_dtable:not(.datatable-connect-editable) .webix_cell select 
+{
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.09);
+	border: none;
+}
+
+.webix_ss_body
+{
+	font-size: var(--fontSize);
+	cursor: default;
+	letter-spacing: 0px;
+}
+
+.webix_column > .webix_cell,
+.webix_column > .webix_cell.webix_row_select
+{
+	border-top: var(--row-border);
+	border-bottom: none;
+}
+
+.webix_column > .webix_cell:last-child,
+.webix_column > .webix_cell:last-child.webix_row_select 
+{
+	border-bottom: var(--row-border);
+}
+
+.webix_cell.webix_dtable_subrow .preview,
+.webix_cell.webix_dtable_subrow .preview > span
+{
+	white-space: nowrap;
+}
+
+.webix_cell.webix_dtable_subrow .preview > span > div > div > p
+{
+	white-space: pre-wrap;
+	line-height: 18px;
+}
+
+.webix_column > .webix_cell
+{
+	line-height: 24px;
+	color: #000000;
+	padding-left: 10px;
+	padding-right: 0px;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_overlay
+{
+	color: #616161;
+	font-style: italic;
+}
+
+.webix_span_layer .webix_table_cell
+{
+	padding-left: 0px;
+}
+
+
+.webix_span_layer div.webix_cell.webix_table_cell.webix_dtable_span.ADLITDGForm2ZER,
+.webix_span_layer div.webix_cell.webix_table_cell.webix_dtable_span.ADLITDGForm2ER 
+{
+	background-color: transparent;
+	border-right: 0px;
+	padding: 0;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell .webix_tree_none
+{
+	width: 18px;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell div.ADBLTDGForm2.idle > div,
+.datatable.webix_dtable .webix_ss_body .webix_cell div.ADBLTDGForm2Z.idle > div
+{
+	color: #236194;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell div.ADBLTDGForm2Z.blue
+{
+	color: #006b8f;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell div.ADBLTDGForm2.hover > div,
+.datatable.webix_dtable .webix_ss_body .webix_cell div.ADBLTDGForm2Z.hover > div 
+{
+	color: #236194;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell div.ADIMGDGForm2Z
+{
+	text-align: center;
+	padding-top: 3px;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell div > input, 
+.datatable.webix_dtable .webix_ss_body .webix_cell span > input
+{
+	margin-top: 0;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.DGBGB .datatable_cell-indent
+{
+	background: transparent;
+}
+
+.webix_dtable_subrow .preview.selected .datatable_cell-indent
+{
+	background: var(--colorBBase)
+}
+
+.datatable.webix_dtable .webix_column.DGCL > div.webix_cell 
+{
+	border-bottom: 0px solid transparent;
+	background: transparent;
+}
+
+.datatable.webix_dtable .webix_tree_close,
+.datatable.webix_dtable .webix_tree_close_postback,
+.datatable.webix_dtable .webix_tree_open,
+.datatable.webix_dtable .webix_tree_open_postback
+{
+	width: 18px;
+	background-position-x: right;
+}
+
+.datatable.webix_dtable .webix_tree_close:before,
+.datatable.webix_dtable .webix_tree_close_postback:before,
+.datatable.webix_dtable .webix_tree_open:before,
+.datatable.webix_dtable .webix_tree_open_postback:before
+{
+	content: none;
+}
+
+.datatable.webix_dtable .webix_tree_open,
+.datatable.webix_dtable .webix_tree_open_postback 
+{
+	background-image: url(DGForm2/c/Image.ashx?theme=Altair);
+	background-repeat: no-repeat;
+}
+
+.datatable.webix_dtable .webix_tree_close,
+.datatable.webix_dtable .webix_tree_close_postback {
+	background-image: url(DGForm2/e/Image.ashx?theme=Altair);
+	background-repeat: no-repeat;
+}
+
+.datatable.webix_dtable .webix_tree_open_postback,
+.datatable.webix_dtable .webix_tree_close_postback 
+{
+	float: left;
+	height: 100%;
+	background-position: center center;
+}
+
+.datatable.webix_dtable .webix-row-hover
+{
+	background: #f2f2f2;
+}
+
+.datatable.webix_dtable .webix_column > div.webix_cell_select,
+.datatable.webix_dtable .webix_column > div.webix_column_select,
+.datatable.webix_dtable .webix_column > div.webix_row_select,
+.preview.selected,
+.preview.selected.webix-row-hover 
+{
+	color: #000000;
+	background: var(--colorBCurrentTheme);
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell.datatable_cell-indent
+{
+	border-top: solid 1px transparent;
+	border-bottom: none;
+}
+
+.datatable.webix_dtable .webix_column > .webix_cell > .red,
+.datatable.webix_dtable .webix_column > .webix_cell > .red.readonly > div 
+{
+	color: #d50000;
+}
+
+.datatable.webix_dtable .webix_select_mark > div.webix_row_select
+{
+	box-shadow: none !important;
+}
+
+.datatable.webix_dtable .webix_column > div.webix-row-hover.webix_row_select,
+.datatable.webix_dtable .preview.selected.webix_row_select
+{
+	background: var(--colorHCurrentTheme);
+}
+
+.datatable.webix_dtable .webix_column > div.webix-row-hover
+{
+	background: #f2f2f2;
+}
+
+/*Scroll - show vertical scroll to inner div*/
+
+[data-control='datagrid'] > td > div
+{
+	overflow: hidden !important;
+}
+
+.datatable.grouptable.webix_dtable
+{
+	/*Font for Group Row Header*/
+}
+
+.datatable.grouptable.webix_dtable .webix_ss_body
+{
+	/*Group row hover*/
+}
+
+.datatable.grouptable.webix_dtable .webix_ss_body .webix_span_layer div.webix_cell.webix_table_cell.webix_dtable_span,
+.datatable.grouptable.webix_dtable .webix_ss_body div.webix_cell.group-footer-column > div[group-leaf="true"] > div
+{
+	background: transparent !important;
+	font-family: var(--groupheader0-font-family);
+	font-weight: normal;
+	border-bottom: none;
+}
+
+.datatable.grouptable.webix_dtable .webix_cell[aria-expanded]:not(.merged-cell)
+{
+	font-family: var(--groupheader0-font-family);
+	font-weight: normal;
+}
+
+.datatable.grouptable.webix_dtable .webix_cell[aria-expanded] [group-leaf="true"]
+{
+	font-family: var(--fontFamily);
+}
+
+.datatable.grouptable.webix_dtable .webix_ss_center_scroll .webix_column > .webix_cell[aria-level] > div[rc='GH'] > *,
+.datatable.grouptable.webix_dtable .webix_ss_center_scroll .webix_column > .webix_cell[aria-level] > div[rc='GF'] > *
+{
+	visibility: hidden;
+}
+
+/*Index area*/
+
+div.ADBOXDGIndex1 .datatable.webix_dtable .webix_cell,
+div.ADBOXDGIndex1 .datatable.webix_dtable > .webix_ss_body .webix_column >.webix_cell:last-child
+{
+	border-bottom: 1px solid transparent;
+	border-top: 1px solid transparent;
+}
+
+div.ADBOXDGIndex1 .datatable.webix_dtable .webix_cell:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+div.ADBOXDGIndex1 .datatable.webix_dtable .DGBGB .webix_cell:hover
+{
+	text-decoration: none;
+}
+
+div.ADBOXDGIndex1 .datatable.webix_dtable div.webix_cell.webix-row-hover
+{
+	background: transparent;
+}
+
+div.ADBOXDGIndex1 .datatable.webix_dtable div.webix_cell.webix-row-hover.webix_row_select
+{
+	background: var(--colorHCurrentTheme);
+}
+
+div.ADBOXDGIndex1 .datatable.webix_dtable div.webix_cell.webix_row_select
+{
+	background: var(--colorHCurrentTheme) !important;
+}
+
+/* Vertical Time line grid style definition */
+
+tr.timelineverticalgrid .datatable.webix_dtable .webix_ss_header .webix_hcolumn div.webix_last_row
+{
+	padding: 0;
+	margin: 0;
+	border-right: none;
+	border-bottom: none;
+	border-top: none;
+}
+
+tr.timelineverticalgrid .datatable .webix_hcolumn > .webix_hcell.nextc .timelinevertical.cbottom
+{
+	background-image: url(DGForm2/tlctopc/Image.ashx?theme=Altair);
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_hcolumn > .webix_hcell .timelinevertical
+{
+	width: 100%;
+}
+
+tr.timelineverticalgrid .datatable .webix_hcolumn > .webix_hcell .timelinevertical.cbottom
+{
+	background-image: url(DGForm2/tlctop/Image.ashx?theme=Altair);
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_hcolumn > .webix_hcell .timelineverticalthread.cbottom
+{
+	background-image: url(DGForm2/tlcthreadt/Image.ashx?theme=Altair);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_cell
+{
+	border-left: none;
+	border-right: none;
+	padding: 0;
+	margin: 0;
+	line-height: 44px;
+	border-top: 1px solid var(--colorAToolbar);
+	border-bottom: none;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_none
+{
+	display: none;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_close,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_close_postback,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_open,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_open_postback 
+{
+	background-position: center 5px;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_close,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_close_postback
+{
+	background-image: url(DGForm2/tle/Image.ashx?theme=Altair);
+	margin-left: 0px;
+	width: 41px;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_open,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_tree_open_postback
+{
+	background-image: url(DGForm2/tlc/Image.ashx?theme=Altair);
+	margin-left: 0px;
+	width: 41px;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC > .webix_cell[aria-level='2'] .scale
+{
+	height: 100%;
+	line-height: 44px;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 0.96px;
+	color: #757575;
+	background-color: white;
+	background-image: url(DGForm2/tlbwhitespace/Image.ashx?theme=Altair), url(DGForm2/scale/Image.ashx?theme=Altair);
+	background-position: bottom, left top;
+	background-repeat: repeat-x, repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_cell
+{
+	padding: 0;
+	margin: 0;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix_row_select,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGTSC .webix-row-hover
+{
+	background-color: white;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell
+{
+	border-bottom: none;
+	border-top: none;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell.webix_row_select
+{
+	background-color: #ffffff;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell.webix_row_select > div.timelinevertical
+{
+	background-image: url(DGForm2/tlcbottomc/Image.ashx?theme=Altair), url(DGForm2/tlctopwc/Image.ashx?theme=Altair), url(DGForm2/tl/Image.ashx?theme=Altair), url(DGForm2/tlbwhitespace/Image.ashx?theme=Altair), url(DGForm2/scale/Image.ashx?theme=Altair);
+	background-position: top, bottom, center, bottom, 3px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-y, repeat-x, repeat;
+	background-color: #0099DD;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell.webix_row_select > div.timelinevertical.noevent
+{
+	background-color: var(--colorBCurrentTheme);
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell.webix_row_select.webix-row-hover > div.timelinevertical.noevent
+{
+	background-color: var(--colorHCurrentTheme);
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell div.timelineverticalthread
+{
+	background: #ffffff;
+	background-image: url(DGForm2/tlthread/Image.ashx?theme=Altair);
+	background-position: center;
+	background-repeat: repeat-y;
+	height: 100%;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell div.timelineverticalthread.ctop
+{
+	background-image: url(DGForm2/tlcthreadb/Image.ashx?theme=Altair), url(DGForm2/tlthread/Image.ashx?theme=Altair);
+	background-position: top, center;
+	background-repeat: no-repeat, repeat-y;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell div.timelineverticalthread.ctop.cbottom
+{
+	background-image: url(DGForm2/tlcthreadb/Image.ashx?theme=Altair), url(DGForm2/tlcthreadt/Image.ashx?theme=Altair), url(DGForm2/tlthread/Image.ashx?theme=Altair);
+	background-position: top, bottom, center;
+	background-repeat: no-repeat, no-repeat, repeat-y;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell div.timelineverticalthread.cbottom
+{
+	background-image: url(DGForm2/tlcthreadt/Image.ashx?theme=Altair), url(DGForm2/tlthread/Image.ashx?theme=Altair);
+	background-position: bottom, center;
+	background-repeat: no-repeat, repeat-y;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC .webix_cell[aria-expanded="true"] div.timelineverticalthread.ctop.cbottom
+{
+	background-image: url(DGForm2/tlcthreadb/Image.ashx?theme=Altair), url(DGForm2/tlcthreadt/Image.ashx?theme=Altair);
+	background-position: top, bottom;
+	background-repeat: no-repeat, no-repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body div.timelinevertical
+{
+	background-color: #E5E5E5;
+	background-image: url(DGForm2/tlcbottom/Image.ashx?theme=Altair), url(DGForm2/tlctopw/Image.ashx?theme=Altair), url(DGForm2/tl/Image.ashx?theme=Altair), url(DGForm2/scale/Image.ashx?theme=Altair);
+	background-position: top, bottom, center, 3px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-y, repeat;
+	height: 100%;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body div.timelinevertical.noevent
+{
+	background-color: #ffffff;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix-row-hover div.timelinevertical.noevent
+{
+	background-color: #f2f2f2;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_header.nextc .webix_hcell.DGVTC.webix_last_row > .timelinevertical.cbottom
+{
+	background-image: url(DGForm2/tlctopc/Image.ashx?theme=Altair);
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .nextc div.timelinevertical 
+{
+	background-image: url(DGForm2/tlcbottom/Image.ashx?theme=Altair), url(DGForm2/tlctopwc/Image.ashx?theme=Altair), url(DGForm2/tl/Image.ashx?theme=Altair), url(DGForm2/tlbwhitespace/Image.ashx?theme=Altair), url(DGForm2/scale/Image.ashx?theme=Altair);
+	background-position: top, bottom, center, bottom, 3px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-y, repeat-x, repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .previousc div.timelinevertical
+{
+	background-image: url(DGForm2/tlcbottomc/Image.ashx?theme=Altair), url(DGForm2/tlctopw/Image.ashx?theme=Altair), url(DGForm2/tl/Image.ashx?theme=Altair), url(DGForm2/tlbwhitespace/Image.ashx?theme=Altair), url(DGForm2/scale/Image.ashx?theme=Altair);
+	background-position: top, bottom, center, bottom, 3px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-y, repeat-x, repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC > .webix_cell > .timelinevertical.last-row,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC > .webix_cell.webix_row_select > .timelinevertical.last-row
+{
+	background: white;
+    background-image: url(DGForm2/tlcbottom/Image.ashx?theme=Altair);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC > .webix_cell > .timelineverticalthread.ctop.last-row
+{
+	background: white;
+	background-image: url(DGForm2/tlcthreadb/Image.ashx?theme=Altair);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGVTC > .webix_cell.previousc > .timelinevertical.last-row
+{
+	background: white;
+    background-image: url(DGForm2/tlcbottomc/Image.ashx?theme=Altair);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column > .webix_cell.last-row,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column > .webix_cell.last-row.webix-row-hover,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column > .webix_cell.last-row.webix_row_select
+{
+	background-color: transparent;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGCC .webix_cell
+{
+	white-space: nowrap !important;
+	padding: 0;
+	margin: 0;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGCC .webix_cell > .chart
+{
+	background-image: url(DGForm2/tlbwhitespace/Image.ashx?theme=Altair);
+	background-position: bottom;
+	background-repeat: repeat-x;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGCC .webix_cell > .nochart
+{
+	background-image: url(DGForm2/tlbwhitespace/Image.ashx?theme=Altair), url(DGForm2/scale/Image.ashx?theme=Altair);
+	background-position: bottom, 6px top;
+	background-repeat: repeat-x, repeat;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGCC .webix_cell > .chart,
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_column.DGCC .webix_cell > .nochart
+{
+	vertical-align: top;
+	padding-left: 24px;
+	padding-top: 12px;
+	padding-bottom: 9px;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+tr.timelineverticalgrid .datatable .webix_ss_body .webix_cell[aria-expanded] .chart > p.title
+{
+	font-family: var(--groupheader0-font-family);
+	font-size: 18px;
+	color: #000000;
+}
+
+.datatable > .webix_ss_body .webix_column > div.webix_cell.timelineverticalfooter.last-row
+{
+	border-bottom: none;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_header .webix_hcell
+{
+	padding: 2px 3px 2px 2px;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_body .webix_cell > div input[type=text] 
+{
+	background-color: transparent;
+	border-width: 0px;
+	margin: 0px 0px 0px 0px;
+	min-height: 18px;
+	line-height: 19px;
+	width: 100%;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_body .webix_cell div select
+{
+	background-color: transparent;	
+	border: none;
+	margin: -3px -3px -3px -1px;
+	width: 100%;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_body .webix_cell div textarea
+{
+	background-color: transparent;
+	border: none;
+	margin: 0px 0px 0px 0px;
+	width: 100%;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_body .webix_cell div.Focus input,
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_body .webix_cell div.Focus select, 
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_body .webix_cell div.Focus textarea
+{
+	border-color: #0099dd;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell
+{
+	padding-left: 0;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_body .webix_cell.webix_dtable_span
+{
+	box-sizing: border-box;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell > div > div
+{
+	padding: 2px;
+	box-sizing: border-box;
+	height: 100%;
+	line-height: 18px;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell.webix_dtable_span > div > div
+{
+	line-height: 20px;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell > div.ADTXTDGForm2 > input,
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell > div.ADTXTDGForm2Z > input
+{
+	padding: 2px 2px 2px 3px;
+	box-sizing: border-box;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell > div.ADDDLDGForm2 > div,
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell > div.ADDDLDGForm2Z > div
+{
+	padding-left: 0px;
+	margin-left: -1px;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_column.DGBGB > .webix_cell > div 
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_ss_body .webix_column.DGBGB > .webix_cell.datatable_cell-indent,
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_ss_body .webix_column.DGBGB > .webix_cell.webix-row-hover
+{
+	background-color: transparent;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_column > div.webix_cell.webix-row-hover:not(.webix_row_select)
+{
+	background-color: #f2f2f2;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_column > div.webix_cell.webix-row-hover.webix_row_select
+{
+	background-color: var(--colorHCurrentTheme);
+}
+
+.datatable-roweditable-bgcolor .webix_column div.Focus,
+.datatable-roweditable-bgcolor .webix_column table.Focus
+{
+	border-color: transparent !important;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_cell,
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_cell.webix-row-hover 
+{
+	border-right: none;
+	border-left: none;
+}
+
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell.Focus:not(.webix_table_cell):not(.datatable_cell-indent) > div.ADTXTDGForm2,
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell.Focus:not(.webix_table_cell):not(.datatable_cell-indent) > div.ADDDLDGForm2,
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell.Focus:not(.webix_table_cell):not(.datatable_cell-indent) > div.ADMLTDGForm2
+{
+	background-color: var(--colorBCurrentTheme);
+}
+
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_cell.readonly.webix_row_select
+{
+	border-top: solid 0px #FFFFFF;
+}
+
+.webix_view.webix_window.webix_popup div.webix_multilist div.webix_list_item input[type=checkbox]:nth-of-type(1)
+{
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.webix_view.webix_window.webix_popup div.webix_multilist div.webix_list_item img
+{
+	margin-bottom: -4px !important;
+}
+
+.datatable_cell_align_center .webix_cell
+{
+	text-align: center;
+}
+
+.webix_hcell.datatable_cell_align_center
+{
+	justify-content: center;
+}
+
+/*Row drag handler*/
+
+.webix_drag_handle 
+{
+	background-image: url(DGForm2/drag/Image.ashx?theme=Altair);
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	cursor: grab;
+	background-position-y: 1px;
+	margin: 2px 0px 0px 4px;
+}
+
+/*Multicell*/
+
+.MultiCell_Header
+{
+	display: flex !important;
+	flex-direction: column !important;
+	line-height: 14px !important;
+}
+
+div .webix_hcell.multicelllevel2_Header
+{
+	height: 46px !important;
+	line-height: 14px !important;
+}
+
+div .webix_hcell.multicelllevel3_Header
+{
+	height: 66px !important;
+	line-height: 14px !important;
+}
+
+.MultiCell_Header div
+{
+	padding-bottom: 7px;
+}
+
+.multicelllevel3 .webix_cell
+{
+	height: 84px !important;
+	line-height: 16px !important;
+}
+
+.multicelllevel2 .webix_cell,
+.webix_dtable_span.multicelllevel2
+{
+	height: 60px !important;
+	line-height: 16px !important;
+}
+.multicelllevel3 > .webix_cell > div > div,
+.multicelllevel2 > .webix_cell > div > div
+{
+	overflow: hidden;
+	white-space: nowrap !important;
+	text-overflow: ellipsis;
+}
+
+.multicelllevel2 .webix_cell[aria-expanded]
+{
+	height: 60px !important;
+	line-height: 16px !important;
+}
+
+.adenet-grid .multicelllevel2 .webix_cell,
+.adenet-grid .multicelllevel3 .webix_cell
+{
+	padding-top: 0px;
+}
+
+.multicelllevel2 .webix_cell div,
+.multicelllevel3 .webix_cell div,
+.grid-multicell-2 .webix_span_layer .webix_cell div,
+.grid-multicell-3 .webix_span_layer .webix_cell div
+{
+	height: 16px !important;
+}
+
+.multicelllevel2.singleColumn .webix_cell div,
+.multicelllevel3.singleColumn .webix_cell div,
+.grid-multicell-2.singleColumn .webix_span_layer .webix_cell div,
+.grid-multicell-3.singleColumn .webix_span_layer .webix_cell div
+{
+	height: 30px !important;
+}
+
+.multicelllevel2 .webix_cell > div,
+.multicelllevel3 .webix_cell > div,
+.grid-multicell-2 .webix_span_layer .webix_cell > div,
+.grid-multicell-3 .webix_span_layer .webix_cell > div
+{
+	padding-top: 8px;
+}
+
+.multicelllevel2 .webix_cell,
+.multicelllevel3 .webix_cell,
+.grid-multicell-2 .webix_span_layer .webix_cell,
+.grid-multicell-3 .webix_span_layer .webix_cell
+{
+	padding-bottom: 10px !important;
+}
+
+.multicelllevel2 .webix_tree_close,
+.multicelllevel2 .webix_tree_close_postback,
+.multicelllevel2 .webix_tree_open,
+.multicelllevel2 .webix_tree_open_postback,
+.multicelllevel3 .webix_tree_close,
+.multicelllevel3 .webix_tree_close_postback,
+.multicelllevel3 .webix_tree_open,
+.multicelllevel3 .webix_tree_open_postback
+{
+	background-position-y: bottom;
+}
+
+.datatable.webix_dtable .webix_ss_header .webix_hcell.multiline 
+{
+	padding-top: 5px;
+	line-height: 18px !important;
+}
+
+.datatable .webix_ss_header .webix_hcell .webix_ss_sort_asc 
+{
+	background: url(DGForm2/asc/Image.ashx?theme=Altair) no-repeat;
+	background-size: 16px 16px;
+}
+
+.datatable .webix_ss_header .webix_hcell .webix_ss_sort_desc 
+{
+	background: url(DGForm2/desc/Image.ashx?theme=Altair) no-repeat;
+	background-size: 16px 16px;
+}
+
+.webix_ss_sort_asc:before,
+.webix_ss_sort_desc:before 
+{
+	content: '' !important;
+}
+
+.webix_hcell 
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.datatable_header_align_right 
+{
+	text-align: right !important;
+}
+
+.datatable_header_align_center 
+{
+	text-align: center !important;
+}
+
+.datatable_header_align_left 
+{
+	text-align: left !important;
+}
+
+.webix_ss_body .webix_column .webix_cell .bggreen 
+{
+	background-color: #a5d6a7;
+}
+
+.webix_ss_body .webix_column .webix_cell .bgyellow 
+{
+	background-color: #ffff00;
+}
+
+.webix_ss_body .webix_column .webix_cell .bgred 
+{
+	background-color: #f8d7da;
+}
+
+
+/*Adopt AdeNet table style to webix*/
+/*Header-First Cell*/
+.webix_first .webix_select_mark 
+{
+	width: 20px;
+}
+
+/*Header right alignment for number value columns*/
+.datatable .webix_ss_header .webix_hcell.datatable_header_align_right 
+{
+	justify-content: flex-end;
+}
+
+.datatable .webix_ss_header .webix_hcell.datatable_header_align_center 
+{
+	text-align: center;
+	display: inline-block;
+}
+
+.webix_hcell.hcell-number .webix_ss_sort_asc,
+.webix_hcell.hcell-number .webix_ss_sort_desc 
+{
+	order: -1;
+}
+
+.datatable .webix_ss_header .webix_hcell.datatable_header_align_right > span 
+{
+	order: 1;
+}
+
+.webix_ss_sort_asc .webix_ss_sort_num,
+.webix_ss_sort_desc .webix_ss_sort_num 
+{
+	left: 11px;
+	right: 5px;
+}
+
+div.webix_message_area,
+div.webix_message .webix_error
+div.webix_message_area > div.webix_message .webix_error 
+{
+	display: none !important;
+}
+
+/*Excel Filter Icon*/
+.datatable.webix_dtable div.webix_hcell.webix_ss_excel_filter.webix_ss_filter_active span.webix_excel_filter 
+{
+	position: relative;
+	background: url(DGForm2/column-filter/Image.ashx?theme=Altair) no-repeat;
+	background-size: 16px 16px;
+	top: 11px;
+	flex: 0 1 auto;
+	right: 0px;
+}
+
+.datatable.webix_dtable div.webix_hcell.webix_ss_excel_filter.webix_ss_filter_active span.webix_excel_filter 
+{
+	order: 3;
+}
+
+.datatable.webix_dtable div.webix_hcell.datatable_header_align_right.webix_ss_excel_filter.webix_ss_filter_active span.webix_excel_filter 
+{
+	order: 1;
+}
+
+a.ADIMGTBDGForm2.disabled[tip^="Total "],
+a.ADIMGTBDGForm2Z.disabled[tip^="Total "],
+a.ADIMGTBForm3T.disabled[tip^="Total "],
+a.ADIMGTBStammblattForm1EmptyT.disabled[tip^="Total "],
+a.ADIMGTBStammblattForm1T.disabled[tip^="Total "],
+a.ADIMGTBStammblattForm2T.disabled[tip^="Total "],
+a.ADLITTBDGForm2.disabled[tip^="Total "],
+a.ADLITTBDGForm2Z.disabled[tip^="Total "],
+a.ADLITTBFooterForm1.disabled[tip^="Total "],
+a.ADLITTBForm1.disabled[tip^="Total "],
+a.ADLITTBForm1T.disabled[tip^="Total "],
+a.ADLITTBForm2.disabled[tip^="Total "],
+a.ADLITTBForm2T.disabled[tip^="Total "],
+a.ADLITTBForm3.disabled[tip^="Total "],
+a.ADLITTBForm3T.disabled[tip^="Total "],
+a.ADLITTBStammblattForm1EmptyT.disabled[tip^="Total "],
+a.ADLITTBStammblattForm1T.disabled[tip^="Total "],
+a.ADLITTBStammblattForm2T.disabled[tip^="Total "] 
+{
+	background-color: transparent;
+	border: none;
+}
+
+a.ADIMGTBDGForm2.disabled[tip^="Total "],
+a.ADIMGTBDGForm2Z.disabled[tip^="Total "],
+a.ADIMGTBForm3T.disabled[tip^="Total "],
+a.ADIMGTBStammblattForm1EmptyT.disabled[tip^="Total "],
+a.ADIMGTBStammblattForm1T.disabled[tip^="Total "],
+a.ADIMGTBStammblattForm2T.disabled[tip^="Total "],
+a.ADLITTBDGForm2.disabled[tip^="Total "],
+a.ADLITTBDGForm2Z.disabled[tip^="Total "],
+a.ADLITTBFooterForm1.disabled[tip^="Total "],
+a.ADLITTBForm1.disabled[tip^="Total "],
+a.ADLITTBForm1T.disabled[tip^="Total "],
+a.ADLITTBForm2.disabled[tip^="Total "],
+a.ADLITTBForm2T.disabled[tip^="Total "],
+a.ADLITTBForm3.disabled[tip^="Total "],
+a.ADLITTBForm3T.disabled[tip^="Total "],
+a.ADLITTBStammblattForm1EmptyT.disabled[tip^="Total "],
+a.ADLITTBStammblattForm1T.disabled[tip^="Total "],
+a.ADLITTBStammblattForm2T.disabled[tip^="Total "] 
+{
+	padding-left: 11px;
+	margin-right: 2px;
+}
+
+td.ADBOXTBForm1R > a.ADIMGTBDGForm2.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADIMGTBDGForm2Z.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADIMGTBForm3T.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADIMGTBStammblattForm1EmptyT.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADIMGTBStammblattForm1T.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADIMGTBStammblattForm2T.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBDGForm2.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBDGForm2Z.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBFooterForm1.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBForm1.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBForm1T.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBForm2.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBForm2T.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBForm3.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBForm3T.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBStammblattForm1EmptyT.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBStammblattForm1T.disabled[tip^="Total "],
+td.ADBOXTBForm1R > a.ADLITTBStammblattForm2T.disabled[tip^="Total "] 
+{
+	padding-right: 10px;
+}
+
+a.ADIMGTBDGForm2.disabled[tip^="Total "] > b,
+a.ADIMGTBDGForm2Z.disabled[tip^="Total "] > b,
+a.ADIMGTBForm3T.disabled[tip^="Total "] > b,
+a.ADIMGTBStammblattForm1EmptyT.disabled[tip^="Total "]  > b,
+a.ADIMGTBStammblattForm1T.disabled[tip^="Total "]  > b,
+a.ADIMGTBStammblattForm2T.disabled[tip^="Total "]  > b,
+a.ADLITTBDGForm2.disabled[tip^="Total "]  > b,
+a.ADLITTBDGForm2Z.disabled[tip^="Total "]  > b,
+a.ADLITTBFooterForm1.disabled[tip^="Total "]  > b,
+a.ADLITTBForm1.disabled[tip^="Total "]  > b,
+a.ADLITTBForm1T.disabled[tip^="Total "]  > b,
+a.ADLITTBForm2.disabled[tip^="Total "]  > b,
+a.ADLITTBForm2T.disabled[tip^="Total "]  > b,
+a.ADLITTBForm3.disabled[tip^="Total "]  > b,
+a.ADLITTBForm3T.disabled[tip^="Total "]  > b,
+a.ADLITTBStammblattForm1EmptyT.disabled[tip^="Total "]  > b,
+a.ADLITTBStammblattForm1T.disabled[tip^="Total "]  > b,
+a.ADLITTBStammblattForm2T.disabled[tip^="Total "]  > b
+{
+	padding: 0px;
+	text-align: left;
+	background-image: none !important
+}
+
+.datatable.webix_dtable .webix_hcell span.cell-htext
+{
+	flex: 0 2 auto;
+	overflow: hidden;
+}
+
+.datatable.webix_dtable .webix_hcell.webix_ss_filter_active span.cell-htext
+{
+	flex: 0 4 auto;
+	overflow: hidden;
+}
+
+.datatable.webix_dtable .webix_ss_filter_active[aria-sort="ascending"] span.webix_excel_filter,
+.datatable.webix_dtable .webix_ss_filter_active[aria-sort="ascending"] span.webix_excel_filter 
+{
+	right: 6px;
+}
+
+/*Filter icon for image columns*/
+.datatable.webix_dtable div.webix_hcell.webix_ss_filter_active.datatable_header_align_center span.webix_excel_filter 
+{
+	position: absolute;
+	background: url(DGForm2/column-filter/Image.ashx?theme=Altair) no-repeat;
+	background-size: 16px 16px;
+	top: 13px;
+	flex: 0 2 auto;
+}
+
+.datatable.webix_dtable .webix_hcell.datatable_header_align_center .webix_ss_sort_asc,
+.datatable.webix_dtable .webix_hcell.datatable_header_align_center .webix_ss_sort_desc
+{
+	position: absolute;
+	margin-right: 12px;
+}
+
+.datatable.webix_dtable .webix_hcell.webix_ss_excel_filter span.webix_excel_filter
+{
+	display: none;
+}
+
+.datatable.webix_dtable .webix_hcell.webix_ss_filter_active span.webix_excel_filter 
+{
+	display: inline;
+}
+
+/* Popup  */
+.webix_popup .webix_el_box 
+{
+	
+}
+
+.webix_popup .webix_el_box input 
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.webix_popup .webix_el_text input,
+.webix_popup .webix_el_combo input,
+.webix_popup .webix_el_richselect input,
+.webix_popup .webix_el_datepicker input,
+.webix_popup .webix_el_colorpicker input,
+.webix_popup .webix_el_search input
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.webix_el_text input,
+.webix_el_combo input,
+.webix_el_richselect input,
+.webix_el_datepicker input,
+.webix_el_colorpicker input,
+.webix_el_search input,
+.webix_el_combo .webix_inp_static,
+.webix_el_richselect .webix_inp_static,
+.webix_el_datepicker .webix_inp_static,
+.webix_el_colorpicker .webix_inp_static,
+.webix_el_search .webix_inp_static 
+{
+	font-family: var(--fontFamily) !important;
+	font-size: var(--fontSize) !important;
+	background-color: var(--colorEBase);
+	border: 1px solid var(--colorAToolbar) !important;
+}
+
+.webix_el_text input:focus,
+.webix_el_combo input:focus,
+.webix_el_richselect input:focus,
+.webix_el_datepicker input:focus,
+.webix_el_colorpicker input:focus,
+.webix_el_search input:focus,
+.webix_el_combo .webix_inp_static,
+.webix_el_richselect .webix_inp_static:focus,
+.webix_el_datepicker .webix_inp_static,
+.webix_el_colorpicker .webix_inp_static,
+.webix_el_search .webix_inp_static
+{
+
+}
+
+.webix_list .webix_list_item,
+.webix_el_box > .webix_button
+{
+	font-family: var(--fontFamily) !important;
+	font-size: var(--fontSize) !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.datatable.webix_dtable .webix_hcell.webix_span .webix_ss_sort_asc,
+.datatable.webix_dtable .webix_hcell.webix_span .webix_ss_sort_desc
+{
+	top: 10%;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.DGCMC .webix_cell div > table
+{
+	visibility: hidden;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_column.DGCMC .webix_cell.webix-row-hover div > table,
+.datatable.webix_dtable .webix_ss_body .webix_column.DGCMC .webix_cell.webix_row_select div > table
+{
+	visibility: visible;
+}
+
+div.webix_column.ADBOXDGForm2ZCol.DGCMC div.ADBOXTBDGForm2Z.content-wrap,
+div.webix_column.ADBOXDGForm2Col.DGCMC div.ADBOXTBDGForm2.content-wrap
+{
+	height: 100%;
+}
+
+div.webix_column.ADBOXDGForm2ZCol.DGCMC div.ADBOXTBDGForm2Z.content-wrap table,
+div.webix_column.ADBOXDGForm2Col.DGCMC div.ADBOXTBDGForm2.content-wrap table
+{
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.webix_column > div.webix_cell > div:not(.content-wrap)
+{
+	white-space: nowrap;
+}
+
+div.webix_column.DGCMC > .webix_cell a.ADLITTBDGForm2,
+div.webix_column.DGCMC > .webix_cell a.ADLITTBDGForm2 > b,
+div.webix_column.DGCMC > .webix_cell a.ADLITTBDGForm2Z,
+div.webix_column.DGCMC > .webix_cell a.ADLITTBDGForm2Z > b
+{
+	font-family: var(--groupheader0-font-family);
+	font-size: 12px;
+	color: var(--colorEText);
+}
+
+div.webix_column.DGCMC > .webix_cell a.ADLITTBDGForm2,
+div.webix_column.DGCMC > .webix_cell a.ADLITTBDGForm2Z > b 
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	vertical-align: top;
+}
+
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell td > a.ADLITTBDGForm2,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell td > a.ADLITTBDGForm2Z
+{
+	display: inline;
+	border: 1px solid #b4b4b4;
+	border-radius: 2px;
+	background-color: #ffffff;
+	padding: 1px 2px 0px 6px;
+	margin-left: 2px;
+	margin-right: 2px;
+
+}
+
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell.webix_row_select td > a[class^='ADIMG']
+{
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-top: 2px;
+	padding-left: 21px;
+	padding-bottom: 2px;
+	position: relative;
+}
+
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell.webix_row_select td > a[class^='ADIMG'].hover,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell.webix_row_select td > a[class^='ADIMG'].pressed 
+{
+	background-color: var(--colorHCurrentTheme);
+}
+
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell.webix-row-hover:not(.webix_row_select) td > a[class^='ADIMG'].hover,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell.webix-row-hover:not(.webix_row_select) td > a[class^='ADIMG'].pressed
+{
+	background-color: #f2f2f2;
+}
+
+div.webix_column.DGCMC > .webix_cell a.hover,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell td > a.ADLITTBDGForm2.hover,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell td > a.ADLITTBDGForm2Z.hover,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell td > a[class^='ADIMG'].hover 
+{
+	filter: brightness(90%)
+}
+
+div.webix_column.DGCMC > .webix_cell a.pressed,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell td > a.ADLITTBDGForm2.pressed,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell td > a.ADLITTBDGForm2Z.pressed,
+.datatable.webix_dtable .webix_ss_body div.webix_column.DGCMC > .webix_cell td > a[class~='ADIMG'].pressed 
+{
+	filter: brightness(80%)
+}
+
+div.webix_column.ADBOXDGForm2ZCol.DGCMC div.ADBOXTBDGForm2Z.content-wrap table tr > td,
+div.webix_column.ADBOXDGForm2Col.DGCMC div.ADBOXTBDGForm2.content-wrap table tr > td 
+{
+	vertical-align: inherit;
+}
+
+.webix_column.DGCMC > .webix_cell.ColX,
+.webix_column.ADBOXDGForm2ColX > .webix_cell
+{
+	display: none;
+}
+
+.timelineverticalgrid .datatable .webix_column.DGCMC > .webix_cell.webix_row_select,
+.timelineverticalgrid .datatable .webix_column.DGCMC > .webix_cell.webix-row-hover,
+.timelineverticalgrid .datatable .webix_hcolumn > div.DGCMC:hover
+{
+	background-color: transparent;
+}
+
+.timelineverticalgrid .datatable .webix_column.DGCMC > .webix_cell
+{
+	border-top: none;
+	border-bottom: none;
+}
+
+.timelineverticalgrid .datatable .webix_column.DGCMC > .webix_cell > div,
+.timelineverticalgrid .datatable .webix_hcolumn > div.DGCMC  > span
+{
+	display: none;
+}
+
+
+
+div[data-sortcolumn-index="0"]:first-of-type + div 
+{
+	top: 8px !important;
+}
+
+div[data-sortcolumn-index='1']:first-of-type + div
+{
+	top: 24px !important;
+}
+
+div[data-sortcolumn-index='2']:first-of-type + div
+{
+	top: 48px !important;
+}
+
+div.webix_dtable_subview
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	border-top: none;
+	border-bottom: none;
+}
+
+.webix_popup .webix_secondary .webix_pressed .webix_button 
+{
+	box-shadow: none;
+}
+
+div.ADIMGFavouriteInactive
+{
+	visibility: hidden;
+	width: 24px;
+}
+
+	div.ADIMGFavouriteActive,
+	tr.ADMNUMenu.hover > td.ADMNUMenuE div.ADIMGFavouriteInactive,
+	div.ADIMGFavouriteInactive.hover,
+	div.ADIMGFavouriteInactive.pressed,
+	div.ADIMGGlobalFavouriteActive
+	{
+		visibility: visible;
+		padding-top: 5px;
+		cursor: pointer;
+		width: 24px;
+	}
+
+.webix_calendar
+{
+	color: #000000;
+}
+
+.webix_calendar .webix_cal_icon:hover, 
+.webix_calendar .webix_cal_time:hover, 
+.webix_calendar .webix_cal_month_name:hover 
+{
+	color: #000000;
+}
+
+.webix_calendar .webix_cal_body .webix_cal_block.webix_selected span,
+.webix_calendar .webix_cal_body .webix_cal_select .webix_cal_day_inner,
+.webix_calendar .webix_cal_body .webix_cal_today.webix_cal_select .webix_cal_day_inner 
+{
+	color: #000000;
+	background-color: var(--colorPCurrentTheme);
+}
+
+.webix_calendar .webix_cal_body .webix_cal_block span:hover,
+.webix_calendar .webix_cal_body .webix_cal_day_inner:hover,
+.webix_calendar .webix_cal_body .webix_cal_day_inner:hover 
+{
+	background-color: #F2F2F2;
+}
+
+div.italic
+{
+	font-style: italic;
+}
+
+div.gray
+{
+	color: #616161;
+}
+
+.webix_el_box > div.webix_inp_static[aria-expanded="true"]
+{
+     border: 1px solid var(--colorECurrentTheme) !important;
+     background-color: var(--colorBCurrentTheme);
+}
+
+.webix_view.webix_list:not(.webix_multilist)
+{
+	background-color: var(--colorBCurrentTheme);
+}
+
+.webix_view.webix_list:not(.webix_multilist) .webix_scroll_cont > .webix_list_item.webix_selected,
+.webix_view.webix_list:not(.webix_multilist) .webix_scroll_cont > .webix_list_item:hover
+{
+	background-color: var(--colorAInfo);
+}
+
+.webix_el_box > input:focus 
+{
+	border: 1px solid var(--colorECurrentTheme) !important;
+	background-color: var(--colorBCurrentTheme);
+}
+
+.datatable.webix_dtable .webix_hcell.reset-filter-hide > span.reset-filter.filter-enabled
+{
+	visibility: hidden;
+	background: url(DGForm2/column-filter-clear/Image.ashx?theme=Altair) no-repeat center;
+	position: relative;
+	top: 2px;
+	flex: 1 auto;
+}
+
+.datatable.webix_dtable .webix_hcell.reset-filter-hide > span.reset-filter.no-filter-enabled
+{
+	visibility: hidden;
+	background: url(DGForm2/contextmenu-caption/Image.ashx?theme=Altair) no-repeat center;
+	position: relative;
+	flex: 1 auto;
+}
+
+.datatable.webix_dtable .webix_ss_header:hover .webix_hcell.reset-filter-hide > span.reset-filter.filter-enabled
+{
+	visibility: visible;
+	cursor: pointer;
+}
+
+.datatable.webix_dtable .webix_ss_header:hover .webix_hcell.reset-filter-hide > span.reset-filter.no-filter-enabled
+{
+	visibility: visible;
+}
+
+.webix_cal_body .webix_cal_row .webix_cal_event 
+{
+	color: #C66200;
+}
+
+.filter-options table
+{
+	table-layout: fixed;
+	width: auto;
+}
+
+/*Aligning FormFields in Horizontal view for filter options*/
+.datatable_filter .ADBOXFAForm2 tbody,
+.datatable_filter .ADBOXFAForm2S tbody,
+.datatable_filter .ADBOXFAForm2LS tbody,
+.datatable_filter .ADBOXFAForm2RS tbody
+{
+	display: table;
+}
+
+.datatable_filter .ADBOXFAForm2 > table > colgroup,
+.datatable_filter .ADBOXFAForm2S > table > colgroup,
+.datatable_filter .ADBOXFAForm2LS > table > colgroup,
+.datatable_filter .ADBOXFAForm2RS > table > colgroup 
+{
+	display: none;
+}
+
+.datatable_filter .ADBOXFAForm2 > table > tbody > tr,
+.datatable_filter .ADBOXFAForm2S > table > tbody > tr,
+.datatable_filter .ADBOXFAForm2LS > table > tbody > tr, 
+.datatable_filter .ADBOXFAForm2RS > table > tbody > tr 
+{
+	display: table-cell;
+	vertical-align: top;
+}
+
+.datatable_filter .ADBOXFAForm2 > table > tbody > tr:first-child,
+.datatable_filter .ADBOXFAForm2S > table > tbody > tr:first-child,
+.datatable_filter .ADBOXFAForm2LS > table > tbody > tr:first-child, 
+.datatable_filter .ADBOXFAForm2RS > table > tbody > tr:first-child 
+{
+	width: 1%;
+	white-space: nowrap;
+}
+
+.datatable_filter .ADBOXFAForm2 > table > tbody > tr:nth-child(2) td.ADCALFFForm2,
+.datatable_filter .ADBOXFAForm2S > table > tbody > tr:nth-child(2) td.ADCALFFForm2,
+.datatable_filter .ADBOXFAForm2LS > table > tbody > tr:nth-child(2) td.ADCALFFForm2, 
+.datatable_filter .ADBOXFAForm2RS > table > tbody > tr:nth-child(2) td.ADCALFFForm2 
+{
+	width: 106px;
+}
+
+.datatable_filter .ADBOXFAForm2S >  table > tbody > tr:nth-child(2) > td:first-child,
+.datatable_filter .ADBOXFAForm2 >  table > tbody > tr:nth-child(2) > td:first-child,
+.datatable_filter .ADBOXFAForm2 >  table > tbody > tr:nth-child(2) > td:nth-child(3),
+.datatable_filter .ADBOXFAForm2S >  table > tbody > tr:nth-child(2) > td:nth-child(3),
+.datatable_filter .ADBOXFAForm2LS > table > tbody > tr:nth-child(2) > td:first-child,
+.datatable_filter .ADBOXFAForm2LS > table > tbody > tr:nth-child(2) > td:nth-child(3),
+.datatable_filter .ADBOXFAForm2RS > table > tbody > tr:nth-child(2) > td:first-child,
+.datatable_filter .ADBOXFAForm2RS > table > tbody > tr:nth-child(2) > td:nth-child(3)
+{
+	display: none;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell div.ADCHKDGForm2
+{
+	text-align: center;
+}
+
+div.content-wrap
+{
+	line-height: 18px;
+}
+
+td.ADLITGBForm2E + .ADBOXGBForm2TC td.ADBOXTBForm2T.favouritecommands-toolbar,
+td.ADLITGBForm2E + .ADBOXGBForm2TC td.ADBOXTBForm2T td.ADBOXTBForm2TRM a.ADIMGTBForm2T,
+td.ADLITGBForm3E + .ADBOXGBForm2TC td.ADBOXTBForm2T.favouritecommands-toolbar,
+td.ADLITGBForm3E + .ADBOXGBForm2TC td.ADBOXTBForm2T td.ADBOXTBForm2TRM a.ADIMGTBForm2T
+{
+	visibility: hidden;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell input[type="checkbox"]:checked,
+.datatable.webix_dtable .webix_ss_body .webix_cell input[type="checkbox"]:not(:checked),
+.datatable.webix_dtable .webix_ss_header .webix_hcell input[type="checkbox"]:checked,
+.datatable.webix_dtable .webix_ss_header .webix_hcell input[type="checkbox"]:not(:checked) 
+{
+    position: absolute !important;
+    left: -9999px !important;
+    margin-top: 4px !important;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell input[type="checkbox"]:checked + label, 
+.datatable.webix_dtable .webix_ss_body .webix_cell input[type="checkbox"]:not(:checked) + label,
+.datatable.webix_dtable .webix_ss_header .webix_hcell input[type="checkbox"]:checked + label, 
+.datatable.webix_dtable .webix_ss_header .webix_hcell input[type="checkbox"]:not(:checked) + label,
+li > a > label.checkbox
+{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	min-width: 16px;
+	min-height: 14px;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell input[type="checkbox"]:focus:checked + label:before,
+.datatable.webix_dtable .webix_ss_header .webix_hcell input[type="checkbox"]:focus:checked + label:before 
+{
+	background: var(--colorALink);
+	border-color: var(--colorALink);
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell input[type="checkbox"]:focus:not(:checked) + label:before 
+{
+    background: var(--colorBCurrentTheme);
+    border-color: var(--colorECurrentTheme);
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell td > a.ADLITTBDGForm2,
+.datatable.webix_dtable .webix_ss_body .webix_cell a.ADLITTBDGForm2 > b,
+.datatable.webix_dtable .webix_ss_body .webix_cell td > a.ADLITTBDGForm2Z,
+.datatable.webix_dtable .webix_ss_body .webix_cell a.ADLITTBDGForm2Z > b
+{
+	background-image: none;
+	background-repeat: no-repeat;
+	padding-right: 4px;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell a.ADLITTBDGForm2:hover,
+.datatable.webix_dtable .webix_ss_body .webix_cell a.ADLITTBDGForm2Z:hover
+{
+	background-color: #d6d6d6;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 1120px)
+{
+	.datatable_filter > td,
+	.datatable_filter .ADBOXGRForm2F tr > td:nth-child(2n+1) 
+	{
+		padding-left: 0px !important;
+		padding-top: 0px !important;
+		float: left;
+		clear: both;
+		margin-top: 4px;
+	}
+
+	.datatable_filter .ADBOXGRForm2F tr > td:nth-child(2n)
+	{
+		float: right;
+		width: 80% !important;
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+
+	.datatable_filter .ADBOXGRForm2F tr > td:nth-child(2n) > div select,
+	.datatable_filter .ADBOXGRForm2F tr > td:nth-child(2n) > div input,
+	.datatable_toolbar,
+	.datatable_filter > td,
+	.datatable_filter > td > table.ADBOXGRForm2F,
+	.datatable_filter table.ADBOXGRForm2F > tbody > tr > td,
+	.datatable-search input 
+	{
+		width: 100% !important;
+	}
+
+	.datatable_filter > td:first-child
+	{
+		padding-left: 0px !important;
+	}
+	
+	.datatable-search
+	{
+		margin-right: 0px;
+		width: auto;
+	}
+}
+
+@media only screen and (max-width: 908px)
+{
+	.datatable_filter .ADBOXGRForm2F tr > td:nth-child(2n)
+	{
+		width: 75% !important;
+	}
+}
+
+/* Editable Datagrid - Begin */
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > div.webix_cell:first-child,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column.DGSC > div.webix_cell:first-child,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2.readonly:first-child,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2.editable:first-child,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2Z.editable:first-child
+{
+	border-top: var(--row-border);
+}
+
+.datatable > .webix_ss_body .webix_column > div.webix_cell:last-child 
+{
+	border-bottom: var(--row-border);
+}
+
+.datatable.datatable-roweditable-bgcolor.grouptable > .webix_ss_body .webix_column.DGCL > .webix_cell,
+.datatable.datatable-roweditable-bgcolor.grouptable > .webix_ss_body .webix_column.DGCR > .webix_cell
+{
+	border-top: solid 0px transparent !important;
+}
+
+.datatable.datatable-roweditable-bgcolor.grouptable > .webix_ss_body .webix_column > .webix_cell.webix_row_select 
+{
+	background-color: var(--colorBCurrentTheme);
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_ss_body .webix_column.DGBGB > .webix_cell[aria-expanded]
+{
+	background-color: #ffffff;
+}
+
+
+.datatable.datatable-roweditable-bgcolor.grouptable > .webix_ss_body .webix_column > .webix_cell.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBLTDGForm2 > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBLTDGForm2.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCBLDGForm2.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADMLTDGForm2.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2Z.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADIMGDGForm2.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADRBLDGForm2.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2Z.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADFKYDGForm2.readonly > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADFKYDGForm2Z.readonly > div
+/*.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2[aria-expanded]*/ 
+{
+	background-color: rgba(0, 0, 0, 0.04);
+}
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBLTDGForm2,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCBLDGForm2,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADMLTDGForm2,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2.readonly,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2Z.readonly,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2.editable,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2Z.editable,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADIMGDGForm2.readonly,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADRBLDGForm2.readonly,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2.editable,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2Z.editable,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADFKYDGForm2,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADFKYDGForm2Z
+{
+	border-top: solid 1px #ffffff;
+	border-left: solid 1px #ffffff;
+	border-right: none;
+}
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column:first-child > .webix_cell
+{
+	border-left: solid 0px transparent;
+}
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.spanned
+{
+	border-left: solid 0px #ffffff;
+}
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADTXTDGForm2,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADTXTDGForm2Z,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADDDLDGForm2,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADDDLDGForm2Z
+{
+	border-top-color: #ffffff;
+	border-left: 1px solid #ffffff;
+	border-right: 0px solid transparent;
+}
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.Focus
+{
+	border: solid 1px var(--colorECurrentTheme) !important;
+	border-radius: 2px;
+}
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.Focus > div > table td 
+{
+	background-color: var(--colorBCurrentTheme);
+}
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADTXTDGForm2 > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADTXTDGForm2Z > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADDDLDGForm2 > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADDDLDGForm2Z > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2 > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCHKDGForm2Z > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column.DGSC > .webix_cell.ADCHKDGForm2.select,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column.DGSC > .webix_cell.ADCHKDGForm2Z.select,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCALDGForm2 > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADCALDGForm2Z > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADFKYDGForm2 > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADFKYDGForm2Z > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADMLTDGForm2 > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADMLTDGForm2Z > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBLTDGForm2.editable > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2.editable > div,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column > .webix_cell.ADBOXTBDGForm2Z.editable > div,
+.datatable .webix_cell.add-row > div
+{
+	background-color: rgba(0, 0, 0, 0.09);
+}
+
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column.DGSC > .webix_cell.ADCHKDGForm2.select > .add-blank-row,
+.datatable.datatable-roweditable-bgcolor > .webix_ss_body .webix_column.DGSC > .webix_cell.ADCHKDGForm2Z.select > .add-blank-row
+{
+	background-color: transparent;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_span_layer > .webix_cell > div.readonly
+{
+	background-color: transparent;
+}
+
+.datatable .webix_span_layer > .webix_cell
+{
+	border-top: 1px solid transparent;
+}
+
+.datatable .webix_cell table td.ADFKYDGForm2ZT
+{
+	padding: 1px 2px;
+}
+
+.datatable .webix_cell table td.ADFKYDGForm2ZB 
+{
+	width: 19px;
+	background-position: -7px -6px;
+}
+
+/* Editable Datagrid - End */
+
+/*Grouped DataGrid*/
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_ss_body .webix_column > div.webix_cell.webix_row_select[aria-expanded="true"],
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable.webix_dtable_focused .webix_column > div.webix_row_select[aria-expanded="true"],
+.datatable.webix_dtable.grouptable .webix_column > div.webix-row-hover.webix_row_select[aria-expanded="true"] 
+{
+	background: var(--colorBBase) !important;
+	background-color: var(--colorBBase) !important;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_cell.ADSPCDGForm2RX > div,
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_cell.ADSPCDGForm2ZRX > div,
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_cell.ADSPCDGForm2ZRFX > div,
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_cell.ADSPCDGForm2RFX > div
+{
+	background-color: rgba(0, 0, 0, 0.09);
+}
+
+.datatable-roweditable-bgcolor .webix_cell > div 
+{
+	height: 100%;
+}
+
+.datatable-roweditable-bgcolor .webix_cell.Focus,
+.datatable.webix_dtable.datatable-roweditable-bgcolor input:focus,
+.datatable.webix_dtable.datatable-roweditable-bgcolor select:focus,
+.datatable.webix_dtable.datatable-roweditable-bgcolor textarea:focus
+{
+	background-color: var(--colorBCurrentTheme) !important;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable div.ADBLTDGForm2.hover div,
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable div.ADBLTDGForm2.pressed div
+{
+     cursor: pointer;
+     text-decoration: underline;
+}
+
+.datatable.webix_dtable.datatable-roweditable-bgcolor div.ADBLTDGForm2.readonly > div 
+{
+    color: var(--colorEText);
+}
+
+/*.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_cell[aria-expanded="true"]:not(.webix_row_select),
+.datatable.webix_dtable.datatable-roweditable-bgcolor.grouptable .webix_cell.webix_row_select[aria-expanded="true"]
+{
+     background-color: var(--colorBBase);
+     border-top: var(--row-border);
+	 border-bottom: 0px solid transparent;
+}*/
+
+
+.datatable.datatable-roweditable-bgcolor.grouptable.webix_dtable .webix_ss_body .webix_cell.webix_row_select > div.ADSPCDGForm2,
+.datatable.datatable-roweditable-bgcolor.grouptable.webix_dtable .webix_ss_body .webix_cell.webix_row_select.webix-row-hover > div.ADSPCDGForm2,
+.datatable.datatable-roweditable-bgcolor.grouptable.webix_dtable .webix_ss_body .webix_cell > div.ADSPCDGForm2
+{
+     background: var(--colorBBase) !important;
+}
+
+.datatable.webix_dtable .webix_ss_body .webix_cell.merged-group-column 
+{
+	border-bottom: none;
+}
+
+.grouptable.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_column:not(.DGCMC) .webix_cell.webix-row-hover:not(.webix_row_select) div.ADCHKDGForm2.editable, 
+.grouptable.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_column .webix_cell.webix-row-hover:not(.webix_row_select) div.ADCHKDGForm2Z.editable,
+.grouptable.datatable.webix_dtable.datatable-roweditable-bgcolor .webix_column .webix_cell.webix-row-hover:not(.webix_row_select) div.ADBOXTBDGForm2.editable
+{
+	background-color: rgba(0, 0, 0, 0.07);
+}
+
+.datatable.webix_dtable .webix_ss_body div.webix_overlay
+{
+	padding-top: 0px;
+}
+
+.datatable.webix_dtable .webix_ss_body div.webix_overlay > div.overlay-text 
+{
+	border-top: var(--header-border-bottom);
+	border-bottom: var(--header-border-bottom);
+	padding: 5px 0px;
+
+}
+
+.datatable.webix_dtable .webix_ss_body div.webix_overlay > div.overlay-text-index-area
+{
+	text-align: left;
+}
+
+.datatable.webix_dtable .webix_dtable_subrow
+{
+	border: none;
+	text-align: left;
+	padding-left: 20px;
+	padding-top: 0px;
+}
+
+.datatable.webix_dtable .webix_dtable_subrow > div.ADLITDGForm2ER,
+.datatable.webix_dtable .webix_dtable_subrow > div.ADLITDGForm2ZER
+{
+	background-color: #ffffff;
+	padding: 0px 0px 0px 5px !important;
+	color: #d50000;
+	font-size: var(--rowError-font-size);
+	line-height: 15px;
+	height: 100%;
+	border-bottom: none;
+	margin-top: -1px;
+	padding-top: 1px;
+}
+
+/* Resize handle */
+.datatable.webix_dtable .webix_resize_handle_x,
+.datatable.webix_dtable .webix_resize_handle_x > div
+{
+	background-color: var(--colorECurrentTheme);
+}
+
+.DGCMC > .webix_cell.ColX,
+.DGCMC > .webix_cell.ColX:last-child 
+{
+	border-bottom: none;
+	border-top: none;
+}
+
+div.ADBOXDGForm2[data-control="datagrid"],
+div.ADBOXDGForm2Z[data-control="datagrid"], 
+div.ADBOXDGPIForm2[data-control="datagrid"],
+div.ADBOXDGStammblattForm2[data-control="datagrid"],
+div.ADBOXDGStammblattListe[data-control="datagrid"]
+{
+     overflow: hidden;
+}
+
+/* Gantt Chart */
+
+.webix_column.DGTLC > .webix_cell > div > div
+{
+	position: relative;
+	border-bottom: solid 1px #bdbdbd;
+    height: 23px !important;
+}
+
+/* Custom Edit */
+table {
+	border: 1px solid #d2d2d2;
+}
+
+.webix_cell {
+	line-height: 35px !important;
+}
+
+.webix_dtable_span {
+	font-weight: bold !important;
+}

@@ -1,0 +1,153 @@
+﻿:root 
+{
+	--colorA1: #669999;
+	--colorE1: #a3c2c2;
+	--colorB1: #d1e0e0;
+	--colorA2: #99cccc;
+	--colorE2: #c2e0e0;
+	--colorB2: #e0f0f0;
+	--colorA3: #b7e6e6;
+	--colorE3: #d4f0f0;
+	--colorB3: #eaf8f8;
+	--colorA4: #cccc99;
+	--colorE4: #e0e0c2;
+	--colorB4: #f0f0e0;
+	--colorA5: #999966;
+	--colorE5: #c2c2a3;
+	--colorB5: #e0e0d1;
+	--colorA6: #336666;
+	--colorE6: #85a3a3;
+	--colorB6: #c1d1d1;
+	--colorA7: #003333;
+	--colorE7: #668585;
+	--colorB7: #adc1c1;
+
+	--colorABlack: #000000;
+	--colorEBlack: #333333;
+	--colorBBlack: #595959;
+	--colorAWhite: #ffffff;
+	--colorEWhite: #ffffff;
+	--colorBWhite: #ffffff;
+
+	--colorAGray: #808080;
+	--colorEGray: #b2b2b2;
+	--colorBGray: #d9d9d9;
+	--colorALink: #006699;
+	--colorELink: #66a3c2;
+	--colorBLink: #b2d1e0;
+
+	--colorARed: #cc0000;
+	--colorERed: #e06666;
+	--colorBRed: #f0b2b2;
+
+	--colorAYellow: #ffcc00;
+	--colorEYellow: #ffe267;
+	--colorBYellow: #fff0b2;
+
+	--colorABlue: #0033ff;
+	--colorEBlue: #6784ff;
+	--colorBBlue: #b3c3ff;
+	--colorAGreen: #009900;
+	--colorEGreen: #66c266;
+	--colorBGreen: #b2e0b2;
+
+	--colorAInfo: #00aeff;
+	--colorBInfo: #c9edfa;
+	--colorBWarn: #fff0b2;
+	--colorBWait: #e9f5c5;
+	--fontFamily: Verdana;
+	--fontSize: 11px;
+	
+	/*form padding // form consist of 40 columns à 17px + left/right padding (inside GroupBox) */
+	--formPaddingLeft: 15px;
+	--formPaddingRight: 15px;
+
+	/* calculated values */
+	--_fieldTextHeight: 13px;
+	--_fieldTextVPadding: 1px;
+	--_fieldTextHeightWithPadding: 15px;
+	--_fieldCheckBoxVMargin: 2px;
+	--_cellCheckBoxVMargin: 0px;
+
+	/*corresponding _fieldTextHeight for specific fonts and size: 
+		// Verdana 11px - > 13px 
+		// Verdana 12px - > 14px 
+		// Tahoma 11px - > 13px 
+		// Tahoma 12px - > 14px 
+		// Arial 11px - > 14px 
+		// Arial 12px - > 15px 
+		// _fieldTextHeight is height of font (leading + accent + descent) - > DIV-Check 
+		// _fieldTextVPadding is additional padding above and below text in fields, usually 1px for small fonts 
+		// _fieldTextHeightWithPadding = _fieldTextHeight + 2 * _fieldTextVPadding 
+		// _fieldCheckBoxVMargin = (_fieldTextHeightWithPadding + 2px - 13px) / 2 
+		// _cellCheckBoxVMargin = (_fieldTextHeight - 13px) / 2 */
+
+	/* richtext */
+	--heading1FontSize: 20px;
+	--heading2FontSize: 17px;
+	--heading3FontSize: 14px;
+	--heading4FontSize: 12px;
+	--heading5FontSize: 12px;
+	--paragraphSpacing: 5px;
+	--heading1Spacing: 15px;
+	--heading2Spacing: 15px;
+	--heading3Spacing: 10px;
+	--heading4Spacing: 10px;
+	--heading5Spacing: 10px;
+	--heading1Color: #045b8d;
+	--heading2Color: #045b8d;
+	--heading3Color: #000000;
+	--heading4Color: #000000;
+	--heading5Color: #404040;
+	--listItemIndent: 20px;
+	--codeFontSize: 11px;
+	--codeLineHeight: normal;
+	/* General values for PDF Reports */
+
+	--pdfFontFamily: Arial;
+	--pdfFontSize: 8pt;
+	
+	/* richtext */
+	--pdfHeading1FontSize: 12pt;
+	--pdfHeading2FontSize: 10pt;
+	--pdfHeading3FontSize: 8pt;
+	--pdfHeading4FontSize: 8pt;
+	--pdfHeading5FontSize: 8pt;
+	--pdfParagraphSpacing: 3pt;
+	--pdfHeading1Spacing: 10pt;
+	--pdfHeading2Spacing: 10pt;
+	--pdfHeading3Spacing: 6pt;
+	--pdfHeading4Spacing: 6pt;
+	--pdfHeading5Spacing: 6pt;
+	--pdfListMarkerFontFamily: Symbol;
+	--pdfListMarkerContent: "\B7";
+	--pdfListMarkerIndent: 3pt;
+	--pdfListMarkerWidth: 7pt;
+	--pdfCheckFontFamily: ZapfDingbats;
+	--pdfCheckUncheckedContent: "\6F";
+	--pdfCheckCheckedContent: "\6E";
+	--pdfRadioFontFamily: ZapfDingbats;
+	--pdfRadioUncheckedContent: "\6D";
+	--pdfRadioCheckedContent: "\6C";
+
+	--mailFontFamily: Tahoma;
+	--mailFontSize: 10pt;
+	--mailHeading1FontSize: 18pt;
+	--mailHeading2FontSize: 16pt;
+	--mailHeading3FontSize: 14pt;
+	--mailHeading4FontSize: 12pt;
+	--mailHeading5FontSize: 11pt;
+	--mailParagraphSpacing: 3pt;
+	--mailHeading1Spacing: 24pt;
+	--mailHeading2Spacing: 24pt;
+	--mailHeading3Spacing: 24pt;
+	--mailHeading4Spacing: 18pt;
+	--mailHeading5Spacing: 18pt;
+	--mailListItemIndent: 20px;
+
+	/*Webix Style used in JS*/
+	
+	--indexRowHeight: 23;
+	--listItemHeight: 23;
+	--inputHeight: 30;
+}
